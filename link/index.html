@@ -1,0 +1,672 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Song Links</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="Redirection hub to various music streaming services" />
+		<meta property="og:site_name" content="Song Links" />
+		<meta property="og:title" content="Song Links" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Redirection hub to various music streaming services" />
+		<link href="https://fonts.googleapis.com/css?family=Barlow:700,700italic%7CExo+2:400,400italic,300,300italic" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="assets/main.css" />
+		<base target="_parent">
+		<style>
+		/*Transparent IFRAME bg*/
+		body {
+		 background: transparent!important;
+		}
+		/*Outlink Hover*/
+		.container.style2 {
+		 position: relative;
+		 transition: background-color 0.2s;
+		}
+		.container.style2:hover {
+		 background-color: #1c1c1c;
+		 transition: background-color 0.2s;
+		}
+		/*Song Previews*/
+		.container.style3:hover {
+		 box-shadow: 0.8rem 0.5rem 2.5rem #0008;
+		 filter: drop-shadow(-1.5rem -1rem 3rem #fff2)!important;
+		 cursor: pointer;
+		 transition: box-shadow 0.5s, filter 0.5s;
+		}
+		.container.style3 {
+		 transition: box-shadow 0.5s, filter 0.5s;
+		 cursor: pointer;
+		}
+		.container.style3 .wrapper .inner:hover .artHover {
+		 opacity: 1;
+		 transition-duration: 0.25s;
+		 cursor: pointer;
+		}
+		.artHover {
+		 opacity: 0;
+		 transition: opacity ease 1s;
+		 border-radius: 1rem;
+		}
+		.artHover, .artHover:before {
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 right: 0;
+		 bottom: 0;
+		 overflow: hidden;
+		 cursor: pointer;
+		}
+		.artHover:before {
+		 display: block;
+		 content: "";
+		 opacity: 0.6;
+		 background: linear-gradient(180deg, #111, #080808);
+		}
+		.playHover {
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 right: 0;
+		 bottom: 0;
+		 width: 100%;
+		 height: 100%;
+		 display: flex;
+		 align-items: center;
+		 -webkit-box-align: center;
+		 -webkit-box-pack: center;
+		 justify-content: center;
+		 overflow: hidden;
+		 transform-origin: center;
+		 opacity: 0;
+		 transition: opacity ease 0.25s;
+		 cursor: pointer;
+		}
+		.container.style3 .wrapper .inner:hover .playHover {
+		 opacity: 1;
+		 transition-duration: 0.25s;
+		 filter: drop-shadow(2px 2px 12px #0008);
+		 cursor: pointer;
+		}
+		.playHover svg {
+		 width: 33%;
+		 height: 33%;
+		}
+		div.play.disabled, div.pause.disabled {
+		 visibility: hidden;
+		 display: none;
+		 width: 0;
+		 height: 0;
+		}
+		
+		/* Custom Scrollbars */
+		/* Firefox */
+		* {
+		 scrollbar-color: #0004 #0000;
+		 scrollbar-width: thin;
+		}
+		/* Chrome/Chromium/Safari */
+		*::-webkit-scrollbar, 
+		*::-webkit-scrollbar-thumb {
+		 width: 28px;
+		 border-radius: 28px;
+		 background-clip: padding-box;
+		 border: 10px solid transparent;
+		}
+		*::-webkit-scrollbar-thumb { 
+		 box-shadow: inset 0 0 0 10px;
+		 transition: color .3s ease;
+		}
+		body:hover, *::-webkit-scrollbar-thumb:hover {
+		 color: rgba(0, 0, 0, 0.3);
+		}
+		*::-webkit-scrollbar-thumb:active {
+		 color: rgba(0, 0, 0, 0.4);
+		}
+		body {
+		 overflow: auto;
+		 color: #0000;
+		 transition: color .3s ease;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<header id="header">
+						<div id="embed10">
+							<a href="https://junki.li/#" style="bottom: 5%;right: 7.5%;width: calc(100px + 5%);position: fixed;z-index: 1;" class="image"><img src="https://junki.li/assets/images/image04.svg?v60609396646951" alt="Junki"></a>
+						</div>
+					</header>
+					<section id="loose-screws-section">
+						<hr id="divider08" class="style1">
+						<div id="container19" class="style3 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image06" class="style1 image">
+										<span class="deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA5NjAgOTYwIiB3aWR0aD0iOTYwIiBoZWlnaHQ9Ijk2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0iIzE5MTEwZSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg%3D%3D" data-src="assets/images/image06.jpg" alt="Never" /></span>
+									</div>
+									<div id="embed20">
+										</div><div onclick="play(this)">
+										<audio id="music" class="music" preload="true" ontimeupdate="ending()">
+										<source 
+										src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/69/9f/ff/699fffb3-e871-5341-cf9f-6943b5ba34a2/mzaf_18042094220564651826.plus.aac.p.m4a">
+										</audio>
+										<div id="pButton" class="artHover"></div>
+										<div class="playHover">
+										<div id="play" class="play"><svg viewBox="0 0 18 18" fill="#fff"><path d="M14.21 8.8l-8.93-5.15c-.15-.09-.35.02-.35.2v10.31c0 .18.19.29.35.2l8.93-5.15c.15-.1.15-.32 0-.41z"></path></svg></div>
+										<div id="pause" class="pause disabled"><svg viewBox="0 0 18 18" fill="#fff"><path d="M8.25 3.78h-2.44c-.17 0-.3.13-.3.3v9.85c0 .17.13.3.3.3h2.44c.17 0 .3-.13.3-.3v-9.85c0-.17-.13-.3-.3-.3zM12.19 3.78h-2.44c-.17 0-.3.13-.3.3v9.85c0 .17.13.3.3.3h2.44c.17 0 .3-.13.3-.3v-9.85c0-.17-.14-.3-.3-.3z"></path></svg></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h2 id="text05" class="style1">Loose Screws</h2>
+						<p id="text04" class="style2">Junki</p>
+						<hr id="divider09" class="style1">
+						<div id="container07" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image09" class="style2 image" data-position="left">
+											<a href="https://toneden.io/ignite-recordings/post/tracks-treats-vol-5"><img src="assets/images/image09.png" alt="ToneDen" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed08">
+											<a href="https://toneden.io/ignite-recordings/post/tracks-treats-vol-5">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons07" class="style1 buttons">
+											<li>
+												<a href="https://toneden.io/ignite-recordings/post/tracks-treats-vol-5" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Free Download</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container08" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image10" class="style2 image" data-position="left">
+											<a href="http://l.junki.li/"><img src="assets/images/image10.png" alt="SoundCloud" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed09">
+											<a href="http://l.junki.li/ls-soundcloud">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons08" class="style1 buttons">
+											<li>
+												<a href="http://l.junki.li/ls-soundcloud" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container04" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image04" class="style2 image" data-position="left">
+											<a href="http://l.junki.li/ls-spotify"><img src="assets/images/image04.png" alt="Spotify" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed14">
+											<a href="http://l.junki.li/ls-spotify">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons03" class="style1 buttons">
+											<li>
+												<a href="http://l.junki.li/ls-spotify" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container02" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image02" class="style2 image" data-position="left">
+											<a href="http://l.junki.li/ls-applemusic"><img src="assets/images/image02.png" alt="Apple Music" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed02">
+											<a href="http://l.junki.li/ls-applemusic">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons02" class="style1 buttons">
+											<li>
+												<a href="http://l.junki.li/ls-applemusic" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container05" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image05" class="style2 image" data-position="left">
+											<a href="http://l.junki.li/ls-deezer"><img src="assets/images/image05.png" alt="Deezer" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed05">
+											<a href="http://l.junki.li/ls-deezer">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons04" class="style1 buttons">
+											<li>
+												<a href="http://l.junki.li/ls-deezer" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr id="divider07" class="style1">
+					</section>
+					<section id="never-section">
+						<hr id="divider03" class="style1">
+						<div id="container12" class="style3 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image14" class="style1 image">
+										<span class="deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA5NjAgOTYwIiB3aWR0aD0iOTYwIiBoZWlnaHQ9Ijk2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0iIzBhMWMyNyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg%3D%3D" data-src="assets/images/image14.jpg" alt="Never" /></span>
+									</div>
+									<div id="embed16">
+										</div><div onclick="play(this)">
+										<audio id="music" class="music" preload="true" ontimeupdate="ending()">
+										<source 
+										src="https://cdns-preview-3.dzcdn.net/stream/c-3dd53beb7b27a4b33f8e669df561d8cf-3.mp3">
+										</audio>
+										<div id="pButton" class="artHover"></div>
+										<div class="playHover">
+										<div id="play" class="play"><svg viewBox="0 0 18 18" fill="#fff"><path d="M14.21 8.8l-8.93-5.15c-.15-.09-.35.02-.35.2v10.31c0 .18.19.29.35.2l8.93-5.15c.15-.1.15-.32 0-.41z"></path></svg></div>
+										<div id="pause" class="pause disabled"><svg viewBox="0 0 18 18" fill="#fff"><path d="M8.25 3.78h-2.44c-.17 0-.3.13-.3.3v9.85c0 .17.13.3.3.3h2.44c.17 0 .3-.13.3-.3v-9.85c0-.17-.13-.3-.3-.3zM12.19 3.78h-2.44c-.17 0-.3.13-.3.3v9.85c0 .17.13.3.3.3h2.44c.17 0 .3-.13.3-.3v-9.85c0-.17-.14-.3-.3-.3z"></path></svg></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h2 id="text01" class="style1">Never</h2>
+						<p id="text06" class="style2">Junki</p>
+						<hr id="divider05" class="style1">
+						<div id="container14" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image15" class="style2 image" data-position="left">
+											<a href="http://l.junki.li/never-spotify"><img src="assets/images/image15.png" alt="Spotify" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed17">
+											<a href="http://l.junki.li/never-spotify">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons12" class="style1 buttons">
+											<li>
+												<a href="http://l.junki.li/never-spotify" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container15" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image16" class="style2 image" data-position="left">
+											<a href="http://l.junki.li/never-apple"><img src="assets/images/image16.png" alt="Apple Music" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed18">
+											<a href="http://l.junki.li/never-apple">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons13" class="style1 buttons">
+											<li>
+												<a href="http://l.junki.li/never-apple" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container18" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image19" class="style2 image" data-position="left">
+											<a href="http://l.junki.li/never-deezer"><img src="assets/images/image19.png" alt="Deezer" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed22">
+											<a href="http://l.junki.li/never-deezer">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons16" class="style1 buttons">
+											<li>
+												<a href="http://l.junki.li/never-deezer" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container16" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image17" class="style2 image" data-position="left">
+											<a href="http://l.junki.li/never-sc"><img src="assets/images/image17.png" alt="SoundCloud" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed19">
+											<a href="http://l.junki.li/never-sc">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons14" class="style1 buttons">
+											<li>
+												<a href="http://l.junki.li/never-sc" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container06" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image08" class="style2 image" data-position="left">
+											<a href="http://l.junki.li/never-matter"><img src="assets/images/image08.png" alt="Matter" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed07">
+											<a href="http://l.junki.li/never-matter">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons06" class="style1 buttons">
+											<li>
+												<a href="http://l.junki.li/never-matter" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container03" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image03" class="style2 image" data-position="left">
+											<a href="http://l.junki.li/never-bc"><img src="assets/images/image03.png" alt="BandCamp" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed03">
+											<a href="http://l.junki.li/never-bc">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons01" class="style1 buttons">
+											<li>
+												<a href="http://l.junki.li/never-bc" class="button n01"><svg><use xlink:href="assets/icons.svg#download"></use></svg><span class="label">Download</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr id="divider04" class="style1">
+					</section>
+					<section id="want-section">
+						<hr id="divider02" class="style1">
+						<div id="container13" class="style3 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="style1 image">
+										<span class="deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA3NTAgNzUwIiB3aWR0aD0iNzUwIiBoZWlnaHQ9Ijc1MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0iIzNhM2MzOSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg%3D%3D" data-src="assets/images/image01.jpg" alt="Want" /></span>
+									</div>
+									<div id="embed04">
+										</div><div onclick="play(this)">
+										<audio id="music" class="music" preload="true" ontimeupdate="ending()">
+										<source 
+										src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/95/ed/6d/95ed6de1-bc2e-5873-7f7d-ea6788f48243/mzaf_9448088327497499756.plus.aac.p.m4a">
+										</audio>
+										<div id="pButton" class="artHover"></div>
+										<div class="playHover">
+										<div id="play" class="play"><svg viewBox="0 0 18 18" fill="#fff"><path d="M14.21 8.8l-8.93-5.15c-.15-.09-.35.02-.35.2v10.31c0 .18.19.29.35.2l8.93-5.15c.15-.1.15-.32 0-.41z"></path></svg></div>
+										<div id="pause" class="pause disabled"><svg viewBox="0 0 18 18" fill="#fff"><path d="M8.25 3.78h-2.44c-.17 0-.3.13-.3.3v9.85c0 .17.13.3.3.3h2.44c.17 0 .3-.13.3-.3v-9.85c0-.17-.13-.3-.3-.3zM12.19 3.78h-2.44c-.17 0-.3.13-.3.3v9.85c0 .17.13.3.3.3h2.44c.17 0 .3-.13.3-.3v-9.85c0-.17-.14-.3-.3-.3z"></path></svg></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h2 id="text03" class="style1">Want</h2>
+						<p id="text02" class="style2">Junki</p>
+						<hr id="divider06" class="style1">
+						<div id="container01" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image07" class="style2 image" data-position="left">
+											<a href="https://soundcloud.com/brokenvaultrecs/junki-want"><img src="assets/images/image07.png" alt="SoundCloud" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed06">
+											<a href="https://soundcloud.com/brokenvaultrecs/junki-want">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons05" class="style1 buttons">
+											<li>
+												<a href="https://soundcloud.com/brokenvaultrecs/junki-want" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container09" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image11" class="style2 image" data-position="left">
+											<a href="https://open.spotify.com/track/7adOS2nc2GAHYBVfib8QQy"><img src="assets/images/image11.png" alt="Spotify" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed11">
+											<a href="https://open.spotify.com/track/7adOS2nc2GAHYBVfib8QQy">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons09" class="style1 buttons">
+											<li>
+												<a href="https://open.spotify.com/track/7adOS2nc2GAHYBVfib8QQy" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container11" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image13" class="style2 image" data-position="left">
+											<a href="https://www.deezer.com/us/track/974840992"><img src="assets/images/image13.png" alt="Deezer" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed13">
+											<a href="https://www.deezer.com/us/track/974840992">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons11" class="style1 buttons">
+											<li>
+												<a href="https://www.deezer.com/us/track/974840992" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container10" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image12" class="style2 image" data-position="left">
+											<a href="https://music.apple.com/album/want/1516053493?i=1516053616"><img src="assets/images/image12.png" alt="Apple Music" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed12">
+											<a href="https://music.apple.com/album/want/1516053493?i=1516053616">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons10" class="style1 buttons">
+											<li>
+												<a href="https://music.apple.com/album/want/1516053493?i=1516053616" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Play</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr id="divider01" class="style1">
+					</section>
+					<section id="placeholders-section">
+						<div id="container17" class="style2 container columns full">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image18" class="style2 image" data-position="left">
+											<a href="https://toneden.io/" class="deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAxMzQzIDM3NyIgd2lkdGg9IjEzNDMiIGhlaWdodD0iMzc3IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cmVjdCBmaWxsPSJ0cmFuc3BhcmVudCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg%3D%3D" data-src="assets/images/image18.png" alt="SoundCloud" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="embed21">
+											<a href="https://toneden.io">
+											 <span style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></span>
+											</a>
+										</div>
+										<ul id="buttons15" class="style1 buttons">
+											<li>
+												<a href="https://toneden" class="button n01"><svg><use xlink:href="assets/icons.svg#play"></use></svg><span class="label">Free Download</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<footer id="footer"></footer>
+				</div>
+			</div>
+		</div>
+		<script src="assets/main.js"></script>
+		<script>
+		var status = 'pause';
+		var duration;
+		var music = document.getElementsByClassName('music')[0];
+		var playB = document.getElementsByClassName('play')[0]; 
+		var pauseB = document.getElementsByClassName('pause')[0]; 
+		// music.addEventListener("timeupdate", ending());
+		function ending() {
+		 if ((music.duration - music.currentTime) * 1000 <= 200 && status == 'play') {
+		 console.log((music.duration - music.currentTime) * 1000);
+		 play();
+		 setTimeout(function(){ 
+		 music.currentTime = 0;
+		}, 100);
+		}}
+		music.addEventListener("canplaythrough", function () {
+		 duration = music.duration;
+		}, false);
+		
+		function play(t = null) {
+		 if (t != null) {
+		music = t.getElementsByClassName('music')[0];
+		playB = t.getElementsByClassName('play')[0];
+		pauseB = t.getElementsByClassName('pause')[0];
+		}
+		 // start music
+		 if (music.paused) {
+		 fadeIn(music);
+		 // music.play();
+		 status = 'play';
+		 pauseB.className = "pause";
+		 playB.className = "play disabled";
+		 } else { // pause music
+		 fadeOut(music);
+		 // music.pause();
+		 status = 'pause';
+		 playB.className = "play";
+		 pauseB.className = "pause disabled";
+		 }
+		}
+		
+		function fadeOut(p_audio){ 
+		 if(status != 'play') return false;
+		
+		 var actualVolume = p_audio.volume;
+		 var fadeOutInterval = setInterval(function(){
+		 actualVolume = (parseFloat(actualVolume) - 0.1).toFixed(1);
+		 if(actualVolume >= 0 && actualVolume <= 1){
+		 p_audio.volume = actualVolume;
+		 } else {
+		 p_audio.pause();
+		 status = 'pause';
+		 clearInterval(fadeOutInterval);
+		 }
+		 }, 25);
+		}
+		function fadeIn(p_audio){ 
+		 if(status == 'play') return false;
+		
+		 var actualVolume = 0;
+		 p_audio.play();
+		 status = 'play';
+		 var fadeInInterval = setInterval(function(){
+		 actualVolume = (parseFloat(actualVolume) + 0.1).toFixed(1);
+		 if(actualVolume >= 0 && actualVolume <= 1){
+		 p_audio.volume = actualVolume;
+		 } else {
+		 p_audio.play();
+		 status = 'play';
+		 clearInterval(fadeInInterval);
+		 }
+		 }, 25);
+		}
+		</script>
+	</body>
+</html>
