@@ -1545,6 +1545,24 @@ h1.style2 a:hover, h2.style2 a:hover, h3.style2 a:hover, p.style2 a:hover {
 	.buttons.style1 li a {
 		font-size: 0.875em;
 	}
+	
+	#embed10 > a {
+		display: none
+		/*bottom: 75%!important;
+		right: auto!important;
+		left: auto!important;
+		width: 30%!important;
+		position: absolute!important;
+		z-index: 1!important;
+		display: block;
+		margin: 0;
+		left: 50%;
+		transform: translate(-50%, 0%);
+	}
+	#embed10 {
+		position: relative;
+		padding-left: 50%;*/
+	}
 }
 
 @media (max-width: 480px) {
