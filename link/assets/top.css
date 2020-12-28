@@ -2,6 +2,13 @@
 body {
   background: transparent!important;
 }
+/*Inactive Links*/
+.inactive, .inactive div div div div a {
+    cursor: not-allowed;
+}
+.container.style2.inactive:hover {
+  background-color: #222!important;
+}
 /*Outlink Hover*/
 .container.style2 {
   position: relative;
