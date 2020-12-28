@@ -498,6 +498,17 @@
 							],
 						},
 					},
+					'fire-away': {
+						hideHeader: true,
+						hideFooter: true,
+						events: {
+							onopen: [
+								function() { 
+									gtag('config', 'UA-166753362-1', { 'page_path': '/#fire-away' });
+								},
+							],
+						},
+					},
 					'vis': {
 						hideHeader: true,
 						hideFooter: true,
