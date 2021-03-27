@@ -1458,6 +1458,13 @@ body.is-touch .container.style1 {
 	background-size: auto, cover;
 }
 
+#cont02 {
+	background-image: linear-gradient(to top, rgba(0,0,0,0.141), rgba(0,0,0,0.141)), url('images/alloybg.jpg');
+	background-position: 0% 0%, center;
+	background-repeat: repeat, no-repeat;
+	background-size: auto, cover;
+}
+
 #container07:not(:first-child) {
 	margin-top: 0rem !important;
 }
@@ -2655,6 +2662,19 @@ h1.style2 a:hover, h2.style2 a:hover, h3.style2 a:hover, p.style2 a:hover {
 		-ms-flex-wrap: nowrap !important;
 		flex-wrap: nowrap !important;
 	}
+	
+/*
+	#container02.columns > .wrapper > .inner {
+		-moz-flex-direction: column !important;
+		-webkit-flex-direction: column !important;
+		-ms-flex-direction: column !important;
+		flex-direction: column !important;
+		-moz-flex-wrap: nowrap !important;
+		-webkit-flex-wrap: nowrap !important;
+		-ms-flex-wrap: nowrap !important;
+		flex-wrap: nowrap !important;
+	}
+*/
 	
 	#container02.columns > .wrapper > .inner > span {
 		display: none;

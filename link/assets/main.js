@@ -437,7 +437,7 @@
 								id = section.id.replace(/-section$/, '');
 	
 								// Index section? Clear.
-									if (id == 'loose-screws')
+									if (id == 'alloy')
 										id = '';
 	
 							// Reset hash to section name (via new state).
@@ -477,7 +477,7 @@
 							}
 	
 						// Section.
-							else if (e = $('#' + (h ? h : 'loose-screws') + '-section')) {
+							else if (e = $('#' + (h ? h : 'alloy') + '-section')) {
 	
 								initialScrollPoint = null;
 								initialSection = e;
@@ -490,7 +490,7 @@
 	
 								// Default to index.
 									initialScrollPoint = null;
-									initialSection = $('#' + 'loose-screws' + '-section');
+									initialSection = $('#' + 'alloy' + '-section');
 									initialId = initialSection.id;
 	
 								// Clear index URL hash.
@@ -578,7 +578,7 @@
 							}
 	
 						// Section.
-							else if (e = $('#' + (h ? h : 'loose-screws') + '-section')) {
+							else if (e = $('#' + (h ? h : 'alloy') + '-section')) {
 	
 								scrollPoint = null;
 								section = e;
@@ -591,7 +591,7 @@
 	
 								// Default to index.
 									scrollPoint = null;
-									section = $('#' + 'loose-screws' + '-section');
+									section = $('#' + 'alloy' + '-section');
 									id = section.id;
 	
 								// Clear index URL hash.
