@@ -1465,6 +1465,13 @@ body.is-touch .container.style1 {
 	background-size: auto, cover;
 }
 
+#cont03 {
+	background-image: linear-gradient(to top, rgba(0,0,0,0.141), rgba(0,0,0,0.141)), url('images/havenbg.jpg');
+	background-position: 0% 0%, center;
+	background-repeat: repeat, no-repeat;
+	background-size: auto, cover;
+}
+
 #container07:not(:first-child) {
 	margin-top: 0rem !important;
 }
