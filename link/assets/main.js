@@ -437,7 +437,7 @@
 								id = section.id.replace(/-section$/, '');
 	
 								// Index section? Clear.
-									if (id == 'keygen')
+									if (id == 'enigma')
 										id = '';
 	
 							// Reset hash to section name (via new state).
@@ -477,7 +477,7 @@
 							}
 	
 						// Section.
-							else if (e = $('#' + (h ? h : 'keygen') + '-section')) {
+							else if (e = $('#' + (h ? h : 'enigma') + '-section')) {
 	
 								initialScrollPoint = null;
 								initialSection = e;
@@ -490,7 +490,7 @@
 	
 								// Default to index.
 									initialScrollPoint = null;
-									initialSection = $('#' + 'keygen' + '-section');
+									initialSection = $('#' + 'enigma' + '-section');
 									initialId = initialSection.id;
 	
 								// Clear index URL hash.
@@ -501,7 +501,7 @@
 					// Deactivate all sections (except initial).
 	
 						// Initially hide header and/or footer (if necessary).
-							name = (h ? h : 'keygen');
+							name = (h ? h : 'enigma');
 							hideHeader = name ? ((name in sections) && ('hideHeader' in sections[name]) && sections[name].hideHeader) : false;
 							hideFooter = name ? ((name in sections) && ('hideFooter' in sections[name]) && sections[name].hideFooter) : false;
 	
@@ -578,7 +578,7 @@
 							}
 	
 						// Section.
-							else if (e = $('#' + (h ? h : 'keygen') + '-section')) {
+							else if (e = $('#' + (h ? h : 'enigma') + '-section')) {
 	
 								scrollPoint = null;
 								section = e;
@@ -591,7 +591,7 @@
 	
 								// Default to index.
 									scrollPoint = null;
-									section = $('#' + 'keygen' + '-section');
+									section = $('#' + 'enigma' + '-section');
 									id = section.id;
 	
 								// Clear index URL hash.
@@ -626,7 +626,7 @@
 								locked = true;
 	
 							// Clear index URL hash.
-								if (location.hash == '#keygen')
+								if (location.hash == '#enigma')
 									history.replaceState(null, null, '#');
 	
 							// Deactivate current section.
